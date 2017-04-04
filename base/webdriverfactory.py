@@ -48,7 +48,7 @@ class WebDriverFactory():
             driver = webdriver.Firefox()
         elif self.browser == "chrome":
             # Set chrome driver
-            chromedriver = "C:\\Users\\ASUS\\PycharmProjects\\pytest-auto\\config\chromedriver.exe"
+            chromedriver = os.getcwd()+"\\config\chromedriver.exe"
             os.environ["webdriver.chrome.driver"] = chromedriver
             driver = webdriver.Chrome(chromedriver)
         else:
